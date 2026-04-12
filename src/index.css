@@ -45,7 +45,6 @@
     --sidebar-border: 220 15% 88%;
     --sidebar-ring: 220 80% 50%;
 
-    /* Custom tokens */
     --red: 0 75% 55%;
     --blue: 220 80% 50%;
     --blue-dark: 220 80% 40%;
@@ -57,11 +56,9 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
@@ -72,21 +69,24 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(220 80% 50%), hsl(220 80% 65%));
   }
-
   .text-gradient-red {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(0 75% 55%), hsl(0 75% 70%));
   }
-
   .shadow-blue {
     box-shadow: 0 10px 30px -10px hsl(220 80% 50% / 0.3);
   }
-
   .shadow-red {
     box-shadow: 0 10px 30px -10px hsl(0 75% 55% / 0.3);
   }
-
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  .bg-overlay {
+    @apply relative;
+  }
+  .bg-overlay::before {
+    content: '';
+    @apply absolute inset-0 bg-primary/85;
   }
 }

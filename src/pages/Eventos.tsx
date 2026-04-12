@@ -1,84 +1,81 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Clock } from "lucide-react";
-
-const events = [
-  {
-    title: "English Conversation Club",
-    date: "Todos los viernes",
-    time: "18:00 - 20:00",
-    location: "Sede Principal",
-    desc: "Practica tu inglés en un ambiente relajado con hablantes nativos. Todos los niveles bienvenidos.",
-    tag: "Semanal",
-  },
-  {
-    title: "Workshop: Business Presentations",
-    date: "15 de Mayo, 2026",
-    time: "10:00 - 14:00",
-    location: "Sala de Conferencias",
-    desc: "Aprende a realizar presentaciones profesionales en inglés con confianza y claridad.",
-    tag: "Taller",
-  },
-  {
-    title: "Simulacro TOEFL",
-    date: "22 de Mayo, 2026",
-    time: "09:00 - 13:00",
-    location: "Aula Digital",
-    desc: "Examen simulado completo con corrección y retroalimentación personalizada.",
-    tag: "Examen",
-  },
-  {
-    title: "Cultural Exchange Night",
-    date: "5 de Junio, 2026",
-    time: "19:00 - 22:00",
-    location: "Terraza",
-    desc: "Noche de intercambio cultural con estudiantes internacionales. Comida, música y mucha diversión.",
-    tag: "Social",
-  },
-];
+import { Calendar, Clock, Users, MonitorSmartphone } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Eventos = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 bg-card">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-secondary text-sm font-medium tracking-widest uppercase mb-4 block">Comunidad</span>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
-            Próximos <span className="text-gradient-blue">Eventos</span>
+      {/* Header */}
+      <section className="relative pt-24 pb-16">
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="Eventos" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-4">
+            <span className="text-secondary">Eventos</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Participa en nuestras actividades y vive el inglés más allá del aula.
           </p>
         </div>
       </section>
 
+      {/* Domingo de Inglés */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-6">
-            {events.map((event) => (
-              <div key={event.title} className="bg-card rounded-xl p-8 border border-border hover:border-primary/40 transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:items-start gap-6">
-                  <div className="flex-1">
-                    <span className="inline-block bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                      {event.tag}
-                    </span>
-                    <h3 className="text-xl font-heading font-bold text-foreground mb-2">{event.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{event.desc}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4 text-primary" /> {event.date}</span>
-                      <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-primary" /> {event.time}</span>
-                      <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> {event.location}</span>
-                    </div>
+          <div className="bg-card rounded-2xl border border-border overflow-hidden">
+            <div className="bg-primary p-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-2">
+                Domingo de Inglés Online
+              </h2>
+              <p className="text-primary-foreground/80">CLASE COMPLETAMENTE GRATIS</p>
+            </div>
+            <div className="p-8">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Te invitamos cordialmente a participar en nuestro evento especial <strong className="text-foreground">"Domingo de Inglés"</strong>, una excelente oportunidad para conocer nuestra metodología de enseñanza y experimentar la calidad de nuestro programa. Diseñadas para adaptarse a distintos niveles de inglés y ayudarte a avanzar de manera efectiva hacia la fluidez.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-3 bg-muted rounded-lg p-4">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <div>
+                    <div className="text-xs text-muted-foreground">Fecha</div>
+                    <div className="font-semibold text-foreground">25 de Mayo del 2025</div>
                   </div>
-                  <Button variant="heroOutline" size="lg" className="shrink-0">
-                    Inscríbete
-                  </Button>
+                </div>
+                <div className="flex items-center gap-3 bg-muted rounded-lg p-4">
+                  <Clock className="w-5 h-5 text-primary" />
+                  <div>
+                    <div className="text-xs text-muted-foreground">Horario</div>
+                    <div className="font-semibold text-foreground">8:00 pm - 9:00 pm CDMX</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-muted rounded-lg p-4">
+                  <Users className="w-5 h-5 text-primary" />
+                  <div>
+                    <div className="text-xs text-muted-foreground">Niveles</div>
+                    <div className="font-semibold text-foreground">Básico e Intermedio</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-muted rounded-lg p-4">
+                  <MonitorSmartphone className="w-5 h-5 text-primary" />
+                  <div>
+                    <div className="text-xs text-muted-foreground">Modalidad</div>
+                    <div className="font-semibold text-foreground">Online (Google Meet)</div>
+                  </div>
                 </div>
               </div>
-            ))}
+              <div className="text-center">
+                <p className="text-foreground font-heading font-bold text-lg mb-4">¡TE VEMOS EL PRÓXIMO DOMINGO DE INGLÉS!</p>
+                <a href="https://wa.me/525521456414" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero" size="lg">Inscríbete Gratis</Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

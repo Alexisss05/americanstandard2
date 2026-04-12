@@ -1,53 +1,23 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import coursesBg from "@/assets/courses-bg.jpg";
+import empresasBg from "@/assets/empresas-bg.jpg";
+import aboutBg from "@/assets/about-bg.jpg";
+import { GraduationCap, MessageCircle, User, Briefcase, Mail } from "lucide-react";
 
-const courses = [
-  {
-    name: "Inglés General",
-    level: "A1 - C2",
-    price: "120",
-    period: "/mes",
-    features: [
-      "4 horas semanales",
-      "Grupos de máximo 12 alumnos",
-      "Material didáctico incluido",
-      "Acceso a plataforma online",
-      "Certificado de nivel",
-    ],
-    popular: false,
-  },
-  {
-    name: "Inglés de Negocios",
-    level: "B1 - C2",
-    price: "180",
-    period: "/mes",
-    features: [
-      "6 horas semanales",
-      "Grupos de máximo 8 alumnos",
-      "Casos prácticos empresariales",
-      "Simulaciones de negocios",
-      "Certificación profesional",
-      "Tutoría personalizada",
-    ],
-    popular: true,
-  },
-  {
-    name: "Preparación Exámenes",
-    level: "B2 - C2",
-    price: "200",
-    period: "/mes",
-    features: [
-      "8 horas semanales",
-      "TOEFL, IELTS, Cambridge",
-      "Simulacros de examen",
-      "Material oficial incluido",
-      "Garantía de resultado",
-      "Sesiones individuales",
-    ],
-    popular: false,
-  },
+const levels = [
+  { name: "Introducción", desc: "Fundamentos del inglés, vocabulario esencial y estructuras gramaticales básicas para comunicarte en situaciones cotidianas." },
+  { name: "Básico", desc: "Desarrollo de comprensión oral y escrita. 3 niveles: Gramática, Estructura, Vocabulario + Club de conversación.", color: "primary" },
+  { name: "Intermedio", desc: "Fortalecimiento de destrezas en comprensión auditiva y escrita. 3 niveles con enfoque en fluidez y seguridad.", color: "secondary" },
+  { name: "Avanzado", desc: "Perfecciona habilidades para conversaciones sofisticadas, textos complejos, expresiones idiomáticas y modismos.", color: "primary" },
+];
+
+const programs = [
+  { icon: MessageCircle, title: "Clubs de Conversación", desc: "Clubes para todos los niveles con profesores nativos altamente capacitados. ¡Aprende de forma divertida y efectiva!" },
+  { icon: User, title: "Clases Privadas", desc: "Aprendizaje personalizado con flexibilidad para diseñar tu propio horario. ¿Mañana o noche? ¡Tú decides!" },
+  { icon: Briefcase, title: "Intelligent Business", desc: "Clubes de conversación enfocados en áreas empresariales: contabilidad, recursos humanos, ventas y logística." },
+  { icon: Mail, title: "Business Communications", desc: "Desarrolla comunicación en inglés para reuniones, correos profesionales, presentaciones y negociaciones internacionales." },
 ];
 
 const Cursos = () => {
@@ -55,55 +25,91 @@ const Cursos = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 bg-card">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-secondary text-sm font-medium tracking-widest uppercase mb-4 block">Formación</span>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
-            Nuestros <span className="text-gradient-blue">Cursos</span>
+      {/* Header */}
+      <section className="relative pt-24 pb-16">
+        <div className="absolute inset-0">
+          <img src={coursesBg} alt="Cursos" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-4">
+            Servicios <span className="text-secondary">Exclusivos</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Programas diseñados para cada objetivo. Encuentra el curso que se adapte a tus necesidades.
+          <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto">
+            Descubre nuestra amplia gama de cursos de inglés diseñados para adaptarse a tu vida. Con horarios flexibles y una variedad de áreas temáticas.
           </p>
         </div>
       </section>
 
+      {/* Método */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {courses.map((course) => (
-              <div
-                key={course.name}
-                className={`rounded-2xl p-8 border transition-all duration-300 ${
-                  course.popular
-                    ? "border-primary bg-card shadow-blue scale-105"
-                    : "border-border bg-card hover:border-primary/30"
-                }`}
-              >
-                {course.popular && (
-                  <span className="inline-block bg-secondary text-secondary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                    Más Popular
-                  </span>
-                )}
-                <h3 className="text-2xl font-heading font-bold text-foreground">{course.name}</h3>
-                <p className="text-muted-foreground text-sm mb-4">Nivel: {course.level}</p>
-                <div className="mb-6">
-                  <span className="text-5xl font-heading font-bold text-primary">€{course.price}</span>
-                  <span className="text-muted-foreground">{course.period}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {course.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button variant={course.popular ? "hero" : "heroOutline"} size="lg" className="w-full">
-                  Inscríbete
-                </Button>
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-3xl font-heading font-bold mb-4">
+                Nuestro Programa: <span className="text-gradient-blue">W.T.T.W</span>
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Nuestro método <strong className="text-foreground">Window To The World</strong> se centra en enseñar el idioma relacionándolo con la lengua materna (español), de modo que los estudiantes logren asentar mejor sus bases y funcionamiento para finalmente comenzar a aplicarlo. Lo que nos hace únicos es nuestro enfoque en la inmersión práctica a través de tres clubes de conversación.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden">
+              <img src={aboutBg} alt="Programa" className="w-full h-64 object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Niveles */}
+      <section className="relative py-16">
+        <div className="absolute inset-0">
+          <img src={empresasBg} alt="Niveles" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-foreground/90" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <h2 className="text-3xl font-heading font-bold text-primary-foreground text-center mb-8">
+            <GraduationCap className="w-8 h-8 inline-block mb-1 mr-2 text-secondary" />
+            Niveles
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {levels.map((level, i) => (
+              <div key={level.name} className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20">
+                <div className="text-secondary font-heading font-bold text-sm mb-2">Fase {i + 1}</div>
+                <h3 className="text-lg font-heading font-bold text-primary-foreground mb-2">{level.name}</h3>
+                <p className="text-primary-foreground/70 text-sm">{level.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Programas */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-heading font-bold text-center mb-8">
+            Nuestros <span className="text-gradient-blue">Programas</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {programs.map((p) => (
+              <div key={p.title} className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 hover:shadow-blue transition-all duration-300">
+                <p.icon className="w-8 h-8 text-primary mb-3" />
+                <h3 className="font-heading font-bold text-foreground mb-2">{p.title}</h3>
+                <p className="text-muted-foreground text-sm">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 bg-secondary text-center">
+        <div className="container mx-auto px-4">
+          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground mb-4">
+            Tu actual circunstancia no determina hasta donde puedes llegar, solo te dice por dónde empezar.
+          </p>
+          <a href="https://wa.me/525521456414" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="lg">Contáctanos</Button>
+          </a>
         </div>
       </section>
 

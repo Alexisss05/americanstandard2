@@ -1,12 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutImg from "@/assets/padel-action.jpg";
-import { Target, Eye, Heart } from "lucide-react";
+import aboutBg from "@/assets/about-bg.jpg";
+import standardsBg from "@/assets/standards-bg.jpg";
+import { Target, Eye, Award, BookOpen, Shield } from "lucide-react";
 
-const values = [
-  { icon: Target, title: "Misión", desc: "Brindar educación en inglés de alta calidad, accesible y orientada a resultados, que permita a nuestros estudiantes alcanzar sus metas profesionales y personales." },
-  { icon: Eye, title: "Visión", desc: "Ser la academia de inglés líder en formación integral, reconocida por la excelencia académica y la innovación en metodologías de enseñanza." },
-  { icon: Heart, title: "Valores", desc: "Compromiso, excelencia, innovación, respeto por la diversidad y pasión por la enseñanza son los pilares que guían cada una de nuestras acciones." },
+const valores = [
+  { icon: Award, title: "Excelencia Académica", desc: "Garantizamos resultados excepcionales con un enfoque innovador y docentes calificados." },
+  { icon: Shield, title: "Código de Ética Profesional", desc: "Actuamos con integridad, transparencia y responsabilidad en cada interacción." },
+  { icon: BookOpen, title: "Adaptación", desc: "Nos ajustamos a las exigencias y metas de nuestros clientes, ofreciendo resultados efectivos de manera eficiente." },
 ];
 
 const Nosotros = () => {
@@ -14,67 +15,80 @@ const Nosotros = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Header */}
-      <section className="pt-32 pb-16 bg-card">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-secondary text-sm font-medium tracking-widest uppercase mb-4 block">Conócenos</span>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
-            Sobre <span className="text-gradient-blue">Nosotros</span>
+      {/* Header with bg */}
+      <section className="relative pt-24 pb-16">
+        <div className="absolute inset-0">
+          <img src={standardsBg} alt="Nosotros" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-4">
+            ¿Quiénes <span className="text-secondary">Somos</span>?
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Más de 10 años formando profesionales bilingües con metodología de primer nivel.
+          <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto">
+            Somos una institución académica que ofrece a los alumnos la posibilidad de estudiar idiomas de forma accesible. Nuestro objetivo es proporcionar clases innovadoras con altos estándares de calidad y English Coaches altamente capacitados.
           </p>
         </div>
       </section>
 
-      {/* About Content */}
+      {/* Misión y Visión */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-blue">
-              <img src={aboutImg} alt="Equipo de English Academy" loading="lazy" className="w-full h-[500px] object-cover" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-5">
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Target className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-3">Misión</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Somos una empresa comprometida en impulsar a otras organizaciones a convertirse en empresas bilingües, ofreciendo soluciones lingüísticas personalizadas para la capacitación de su capital humano. Nuestro objetivo es potenciar el crecimiento y la competitividad empresarial a través de programas de idiomas innovadores, impartidos por docentes altamente capacitados y respaldados por herramientas tecnológicas de vanguardia.
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Una Academia con <span className="text-gradient-red">Propósito</span>
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                English Academy nació con la convicción de que aprender inglés no debería ser un lujo, sino una herramienta accesible para todos. Nuestro enfoque se centra en la comunicación real y el desarrollo integral de habilidades.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Contamos con un equipo de más de 50 profesores certificados, instalaciones modernas y una plataforma digital que complementa el aprendizaje presencial. Cada programa está diseñado para maximizar el progreso de nuestros estudiantes.
-              </p>
-              <div className="grid grid-cols-3 gap-6 text-center">
-                {[
-                  { value: "10+", label: "Años" },
-                  { value: "5,000+", label: "Egresados" },
-                  { value: "3", label: "Sedes" },
-                ].map((s) => (
-                  <div key={s.label} className="border border-border rounded-xl p-4">
-                    <div className="text-2xl font-heading font-bold text-primary">{s.value}</div>
-                    <div className="text-muted-foreground text-sm">{s.label}</div>
-                  </div>
-                ))}
+            <div className="flex gap-5">
+              <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                <Eye className="w-7 h-7 text-secondary" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-3">Visión</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Ser la empresa líder en la formación bilingüe empresarial. Aspiramos a ser reconocidos como el mejor aliado estratégico para las empresas que buscan fortalecer su posición a nivel global, distinguiéndose a través de una comunicación efectiva, un servicio de alta calidad y una atención al cliente excepcional.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission / Vision / Values */}
-      <section className="section-padding bg-card">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((v) => (
-              <div key={v.title} className="bg-background rounded-xl p-8 border border-border text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <v.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-foreground mb-3">{v.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
+      {/* Valores with bg */}
+      <section className="relative py-16">
+        <div className="absolute inset-0">
+          <img src={aboutBg} alt="Valores" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-foreground/85" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <h2 className="text-3xl font-heading font-bold text-primary-foreground text-center mb-8">
+            Nuestros <span className="text-secondary">Valores</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {valores.map((v) => (
+              <div key={v.title} className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20 text-center">
+                <v.icon className="w-8 h-8 text-secondary mx-auto mb-4" />
+                <h3 className="text-lg font-heading font-bold text-primary-foreground mb-2">{v.title}</h3>
+                <p className="text-primary-foreground/70 text-sm">{v.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Quote */}
+      <section className="py-12 bg-secondary text-center">
+        <div className="container mx-auto px-4">
+          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic">
+            "Tu actual circunstancia no determina hasta donde puedes llegar, solo te dice por dónde empezar para mejorar tu futuro."
+          </p>
         </div>
       </section>
 
