@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Shield, CheckCircle, FileText, Award } from "lucide-react";
 import standardsBg from "@/assets/standards-bg.jpg";
 import aboutBg from "@/assets/about-bg.jpg";
+import graduationImg from "@/assets/graduation.jpg";
 
 const standards = [
   {
@@ -26,6 +28,8 @@ const standards = [
 ];
 
 const Estandares = () => {
+  useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -34,13 +38,13 @@ const Estandares = () => {
       <section className="relative pt-24 pb-16">
         <div className="absolute inset-0">
           <img src={standardsBg} alt="Estándares" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/85" />
+          <div className="absolute inset-0 bg-background/85" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-4">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
             Estándares de <span className="text-secondary">Competencias</span>
           </h1>
-          <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Certificaciones oficiales avaladas por reconocidas instituciones que respaldan la calidad de nuestros programas con reconocimiento nacional e internacional.
           </p>
         </div>
@@ -49,9 +53,9 @@ const Estandares = () => {
       {/* Standards */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto stagger-children">
             {standards.map((s) => (
-              <div key={s.title} className="bg-card rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-blue transition-all duration-300">
+              <div key={s.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/40 card-hover">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <s.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -71,14 +75,20 @@ const Estandares = () => {
         </div>
       </section>
 
-      {/* Quote with bg */}
+      {/* Graduation image break */}
+      <section className="relative h-48">
+        <img src={graduationImg} alt="Graduación" className="w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      </section>
+
+      {/* Quote */}
       <section className="relative py-16">
         <div className="absolute inset-0">
           <img src={aboutBg} alt="Quote" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-secondary/90" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic max-w-3xl mx-auto animate-on-scroll">
             "Estamos comprometidos con la excelencia académica y el crecimiento profesional de nuestros estudiantes."
           </p>
         </div>
