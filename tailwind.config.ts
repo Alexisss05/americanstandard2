@@ -25,6 +25,7 @@ export default {
         blue: {
           DEFAULT: "hsl(var(--blue))",
           dark: "hsl(var(--blue-dark))",
+          light: "hsl(var(--blue-light))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
