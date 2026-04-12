@@ -13,18 +13,18 @@ export default {
       },
     },
     fontFamily: {
-      heading: ["Space Grotesk", "sans-serif"],
+      heading: ["Poppins", "sans-serif"],
       body: ["Inter", "sans-serif"],
     },
     extend: {
       colors: {
-        lime: {
-          DEFAULT: "hsl(var(--lime))",
-          glow: "hsl(var(--lime-glow))",
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          dark: "hsl(var(--red-dark))",
         },
-        "dark-surface": {
-          DEFAULT: "hsl(var(--dark-surface))",
-          hover: "hsl(var(--dark-surface-hover))",
+        blue: {
+          DEFAULT: "hsl(var(--blue))",
+          dark: "hsl(var(--blue-dark))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,20 +77,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
