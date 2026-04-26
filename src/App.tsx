@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 
@@ -12,3 +13,41 @@ function App() {
 }
 
 export default App;
+=======
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Index from "./pages/Index";
+import Nosotros from "./pages/Nosotros";
+import Cursos from "./pages/Cursos";
+import Eventos from "./pages/Eventos";
+import Estandares from "./pages/Estandares";
+import Empresas from "./pages/Empresas";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/cursos" element={<Cursos />} />
+          <Route path="/eventos" element={<Eventos />} />
+          <Route path="/estandares" element={<Estandares />} />
+          <Route path="/empresas" element={<Empresas />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
+>>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e
