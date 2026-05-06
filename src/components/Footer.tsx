@@ -27,8 +27,8 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-3 text-sm text-foreground">Academia</h4>
             <ul className="space-y-2">
               {[
-                { label: "Inicio", to: "/" },
-                { label: "Nosotros", to: "/nosotros" },
+                { label: "Quiénes Somos", to: "/" },
+                { label: "¿Por qué Nosotros?", to: "/nosotros" },
                 { label: "Cursos", to: "/cursos" },
                 { label: "Eventos", to: "/eventos" },
               ].map((link) => (
@@ -43,7 +43,6 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-3 text-sm text-foreground">Servicios</h4>
             <ul className="space-y-2">
               {[
-                { label: "Estándares", to: "/estandares" },
                 { label: "Empresas", to: "/empresas" },
               ].map((link) => (
                 <li key={link.label}>
