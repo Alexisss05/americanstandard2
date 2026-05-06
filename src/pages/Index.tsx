@@ -105,9 +105,6 @@ const Index = () => {
             </div>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
-            Nuestros <span className="text-secondary">Valores</span>
-          </h3>
         </div>
       </section>
 
