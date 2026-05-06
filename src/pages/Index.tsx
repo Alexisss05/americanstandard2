@@ -1,42 +1,17 @@
-<<<<<<< HEAD
-export default function Index() {
-  return (
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4">
-      <div className="bg-white/10 p-10 rounded-2xl backdrop-blur-md border border-white/20 shadow-2xl text-center">
-        <h1 className="text-white text-6xl font-black mb-4 tracking-tighter">
-          AMERICAN STANDARD
-        </h1>
-        <div className="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
-        <p className="text-slate-300 text-xl mb-8">
-          Sistemas configurados correctamente.
-        </p>
-        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest transition-all transform hover:scale-105">
-          ¡ESTÁ VIVO!
-        </button>
-      </div>
-    </div>
-  );
-}
-=======
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Video, DollarSign, PlayCircle, Headphones } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Target, Eye, Award, BookOpen, Shield } from "lucide-react";
+import ClientsCarousel from "@/components/ClientsCarousel";
 import heroBg from "@/assets/hero-bg.jpg";
-import aboutBg from "@/assets/about-bg.jpg";
-import coursesBg from "@/assets/courses-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
-import conversationImg from "@/assets/conversation-club.jpg";
 import graduationImg from "@/assets/graduation.jpg";
 
-const benefits = [
-  { icon: PlayCircle, title: "Master Class Gratuita", desc: "Experimenta directamente nuestra metodología de enseñanza sin costo." },
-  { icon: BookOpen, title: "Material de Apoyo", desc: "Material totalmente gratuito diseñado para reforzar el aprendizaje fuera del aula." },
-  { icon: Video, title: "Clases 100% en Vivo", desc: "Clases en tiempo real para una mayor interacción y experiencia personalizada." },
-  { icon: Users, title: "Grupos Reducidos", desc: "Atención personalizada con grupos pequeños para un aprendizaje más efectivo." },
-  { icon: Headphones, title: "Clases Grabadas", desc: "Accede a las lecciones en cualquier momento para repasar cuando lo necesites." },
-  { icon: DollarSign, title: "Costos Accesibles", desc: "Cursos de inglés accesibles y convenientes para que todos puedan aprender." },
+const valores = [
+  { icon: Award, title: "Excelencia Académica", desc: "Garantizamos resultados excepcionales con un enfoque innovador y docentes calificados." },
+  { icon: Shield, title: "Código de Ética Profesional", desc: "Actuamos con integridad, transparencia y responsabilidad en cada interacción." },
+  { icon: BookOpen, title: "Adaptación", desc: "Nos ajustamos a las exigencias y metas de nuestros clientes, ofreciendo resultados efectivos de manera eficiente." },
 ];
 
 const Index = () => {
@@ -70,7 +45,6 @@ const Index = () => {
             </Button>
           </a>
 
-          {/* Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
               { value: "500+", label: "Estudiantes" },
@@ -87,131 +61,76 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ¿Quiénes somos? with image */}
+      {/* Quiénes Somos: Misión, Visión, Valores */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div className="animate-on-scroll slide-left">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-foreground">
-                ¿<span className="text-gradient-blue">Quiénes Somos</span>?
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                En <strong className="text-foreground">American Standard Centro de Idiomas</strong> somos una institución académica comprometida con brindar una enseñanza de idiomas accesible, innovadora y de alta calidad. Contamos con English Coaches altamente capacitados y una metodología centrada en el aprendizaje práctico y significativo.
-              </p>
-              <p className="text-muted-foreground mt-4 leading-relaxed">
-                Nuestro propósito es fomentar el gusto por el idioma inglés y contribuir al desarrollo social, económico y cultural de México.
-              </p>
-            </div>
-            <div className="animate-on-scroll slide-right">
-              <div className="rounded-2xl overflow-hidden glow-blue">
-                <img src={classroomImg} alt="Aula de clases" className="w-full h-80 object-cover" loading="lazy" width={1920} height={1080} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ¿Por qué nosotros? */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={aboutBg} alt="Aula" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/90" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 animate-on-scroll">
-            ¿Por Qué <span className="text-secondary">Nosotros</span>?
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-8 animate-on-scroll">
-            Certificaciones oficiales avaladas por la SEP, CONOCER y OXFORD que respaldan la calidad de nuestros programas con reconocimiento nacional e internacional.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 items-center stagger-children">
-            {["SEP", "CONOCER", "OXFORD"].map((cert) => (
-              <div key={cert} className="animate-on-scroll scale-up bg-card/80 backdrop-blur-sm rounded-xl px-8 py-5 border border-border hover:border-primary/40 card-hover">
-                <span className="text-foreground font-heading font-bold text-xl">{cert}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Beneficios */}
-      <section className="section-padding bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-3 animate-on-scroll text-foreground">
-            Nuestros <span className="text-gradient-blue">Beneficios</span>
-          </h2>
-          <p className="text-muted-foreground text-center mb-10 animate-on-scroll">Servicio, calidad, costos accesibles y rápido aprendizaje</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-            {benefits.map((b) => (
-              <div key={b.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/50 card-hover group">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <b.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-heading font-semibold text-foreground mb-2">{b.title}</h4>
-                <p className="text-muted-foreground text-sm">{b.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Conversation club image section */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={conversationImg} alt="Club de conversación" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/85" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 animate-on-scroll">
-              Método <span className="text-secondary">Window To The World</span>
+          <div className="text-center mb-12 animate-on-scroll">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              ¿<span className="text-gradient-blue">Quiénes Somos</span>?
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6 animate-on-scroll">
-              Nuestro método W.T.T.W se centra en enseñar el idioma relacionándolo con la lengua materna, de modo que los estudiantes logren asentar mejor sus bases para comenzar a aplicarlo. Lo que nos hace únicos es nuestro enfoque en la inmersión práctica a través de tres clubes de conversación.
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Somos una institución académica que ofrece a los alumnos la posibilidad de estudiar idiomas de forma accesible, con clases innovadoras y English Coaches altamente capacitados.
             </p>
-            <p className="text-muted-foreground/70 text-sm animate-on-scroll">
-              Al completar el curso, serás capaz de desenvolverte en inglés con fluidez excepcional, dominando la comunicación oral, lectura y escritura de manera impecable.
-            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
+            <div className="animate-on-scroll slide-left">
+              <div className="rounded-2xl overflow-hidden glow-blue">
+                <img src={classroomImg} alt="Aula" className="w-full h-80 object-cover" loading="lazy" width={1920} height={1080} />
+              </div>
+            </div>
+            <div className="animate-on-scroll slide-right space-y-6">
+              <div className="flex gap-5">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Target className="w-7 h-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">Misión</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Somos una empresa comprometida en impulsar a otras organizaciones a convertirse en empresas bilingües, ofreciendo soluciones lingüísticas personalizadas para la capacitación de su capital humano.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-5">
+                <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-7 h-7 text-secondary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">Visión</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Ser la empresa líder en la formación bilingüe empresarial. Aspiramos a ser reconocidos como el mejor aliado estratégico para las empresas que buscan fortalecer su posición a nivel global.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
+            Nuestros <span className="text-secondary">Valores</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6 stagger-children">
+            {valores.map((v) => (
+              <div key={v.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border card-hover text-center">
+                <v.icon className="w-8 h-8 text-secondary mx-auto mb-4" />
+                <h4 className="text-lg font-heading font-bold text-foreground mb-2">{v.title}</h4>
+                <p className="text-muted-foreground text-sm">{v.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Costos */}
-      <section className="section-padding bg-card">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground animate-on-scroll">
-            Nuestros <span className="text-gradient-red">Costos</span>
-          </h2>
-          <div className="animate-on-scroll scale-up bg-background rounded-2xl p-8 border border-border max-w-md mx-auto glow-blue">
-            <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2">Pesos Mexicanos Mensuales</p>
-            <div className="text-6xl font-heading font-bold text-primary mb-4 animate-float">$1,500</div>
-            <p className="text-muted-foreground text-sm mb-6">
-              ¡Tenemos promociones especiales en nuestros cursos diseñadas para ti!
-            </p>
-            <a href="https://wa.me/525521456414" target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="lg" className="w-full">Atención Personalizada</Button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Graduation / Clientes */}
+      {/* Clientes carrusel */}
       <section className="relative py-16">
         <div className="absolute inset-0">
           <img src={graduationImg} alt="Graduación" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-background/90" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-8 text-foreground animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Clientes</span>
           </h2>
-          <div className="flex flex-wrap justify-center gap-6 items-center stagger-children">
-            {["Elektra", "Walmart", "Coca-Cola", "Nissan", "Coppel", "Burger King", "Nestlé", "BenefitHub"].map((name) => (
-              <div key={name} className="animate-on-scroll bg-card/60 backdrop-blur-sm rounded-lg px-6 py-3 border border-border card-hover">
-                <span className="text-foreground font-heading font-semibold">{name}</span>
-              </div>
-            ))}
-          </div>
+          <ClientsCarousel />
         </div>
       </section>
 
@@ -237,4 +156,3 @@ const Index = () => {
 };
 
 export default Index;
->>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e

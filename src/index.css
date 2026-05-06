@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-=======
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -176,4 +171,3 @@
   background-size: 200% 200%;
   animation: gradient-shift 4s ease infinite;
 }
->>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e
