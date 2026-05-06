@@ -2,30 +2,34 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { PlayCircle, BookOpen, Video, Users, Headphones, DollarSign, Gift, ArrowRight, Phone } from "lucide-react";
+import { PlayCircle, BookOpen, Video, Users, Headphones, DollarSign, Gift, ArrowRight, Phone, Handshake, FileSignature, Briefcase, FileCheck, ChevronRight } from "lucide-react";
 import empresasBg from "@/assets/empresas-bg.jpg";
 import corporateImg from "@/assets/corporate.jpg";
 
 const convenios = [
   {
+    icon: Handshake,
     title: "Convenio Standard",
     desc: "Su empresa funge como un canal clave para la difusión de nuestros cursos de inglés entre sus colaboradores. Los beneficios del programa pueden extenderse a familiares y amigos.",
     becas: "Una beca gratuita de 3 meses + una beca adicional por cada 10 estudiantes inscritos.",
     resp: ["La empresa no asume el costo de la colegiatura.", "Los colaboradores se inscriben y pagan de manera individual.", "Reportes mensuales con la lista de inscritos."],
   },
   {
+    icon: FileSignature,
     title: "Convenio Vía Nómina",
     desc: "La empresa impulsa el aprendizaje del inglés mediante descuento por nómina. El colaborador autoriza el descuento y no tiene que preocuparse por gestiones de pago.",
     becas: "Una beca de 3 meses gratuita + una beca adicional por cada 10 personas inscritas.",
     resp: ["Cada colaborador autoriza el descuento vía nómina.", "Desglose mensual actualizado de estudiantes inscritos.", "La empresa cubre el IVA."],
   },
   {
+    icon: Briefcase,
     title: "Contrato Standard",
     desc: "La empresa brinda capacitación a sus colaboradores mediante asignación a grupos ya establecidos, según nivel y disponibilidad horaria determinados por examen de colocación.",
     becas: "Una beca con todos los gastos cubiertos por cada 10 estudiantes durante la vigencia del contrato.",
     resp: ["La empresa cubre el costo mensual más IVA.", "Reportes mensuales de asistencia y resultados.", "Posibilidad de dar de baja o sustituir estudiantes."],
   },
   {
+    icon: FileCheck,
     title: "Contrato Personalizado",
     desc: "Colaboración estratégica con programa diseñado a la medida, ajustado a las necesidades específicas de la organización. Horarios flexibles seleccionados por la empresa.",
     becas: "3 becas gratuitas por cada 20 personas inscritas durante la vigencia del contrato.",
