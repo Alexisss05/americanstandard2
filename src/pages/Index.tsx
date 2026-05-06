@@ -6,7 +6,7 @@ import { Target, Eye, Award, BookOpen, Shield } from "lucide-react";
 import ClientsCarousel from "@/components/ClientsCarousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
-import graduationImg from "@/assets/graduation.jpg";
+import valuesBg from "@/assets/values-bg.jpg";
 
 const valores = [
   { icon: Award, title: "Excelencia Académica", desc: "Garantizamos resultados excepcionales con un enfoque innovador y docentes calificados." },
@@ -22,17 +22,17 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="Ciudad moderna" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 pt-16 text-center">
+        <div className="relative z-10 container mx-auto px-4 pt-24 pb-16 text-center">
           <div className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 animate-pulse-glow">
             <span className="text-primary text-sm font-medium tracking-widest uppercase">Centro de Idiomas</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4 text-foreground">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4 text-white">
             WELCOME TO<br />
             <span className="text-secondary">AMERICAN STANDARD CDI</span>
           </h1>
@@ -45,14 +45,14 @@ const Index = () => {
             </Button>
           </a>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto bg-background/60 backdrop-blur-md rounded-2xl p-6 border border-border">
             {[
               { value: "500+", label: "Estudiantes" },
               { value: "10+", label: "Coaches" },
               { value: "4", label: "Niveles" },
               { value: "100%", label: "En Vivo" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center animate-on-scroll">
+              <div key={stat.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-heading font-bold text-primary">{stat.value}</div>
                 <div className="text-muted-foreground text-sm mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
@@ -65,8 +65,8 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              ¿<span className="text-gradient-blue">Quiénes Somos</span>?
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+              ¿Quiénes Somos?
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               Somos una institución académica que ofrece a los alumnos la posibilidad de estudiar idiomas de forma accesible, con clases innovadoras y English Coaches altamente capacitados.
@@ -105,12 +105,22 @@ const Index = () => {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Nuestros Valores con fondo */}
+      <section className="relative py-16">
+        <div className="absolute inset-0">
+          <img src={valuesBg} alt="Valores" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-background/80" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
             Nuestros <span className="text-secondary">Valores</span>
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 stagger-children">
+          <div className="grid md:grid-cols-3 gap-6 stagger-children max-w-5xl mx-auto">
             {valores.map((v) => (
-              <div key={v.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border card-hover text-center">
+              <div key={v.title} className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover text-center">
                 <v.icon className="w-8 h-8 text-secondary mx-auto mb-4" />
                 <h4 className="text-lg font-heading font-bold text-foreground mb-2">{v.title}</h4>
                 <p className="text-muted-foreground text-sm">{v.desc}</p>
@@ -121,12 +131,8 @@ const Index = () => {
       </section>
 
       {/* Clientes carrusel */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={graduationImg} alt="Graduación" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/90" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Clientes</span>
           </h2>

@@ -1,20 +1,26 @@
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import amazon from "@/assets/clients/amazon.png";
+import nissan from "@/assets/clients/nissan.png";
+import sams from "@/assets/clients/sams.png";
+import coppel from "@/assets/clients/coppel.png";
+import burgerking from "@/assets/clients/burgerking.png";
+import fraiche from "@/assets/clients/fraiche.png";
+import nestle from "@/assets/clients/nestle.png";
+import ampi from "@/assets/clients/ampi.png";
+import benefithub from "@/assets/clients/benefithub.png";
 
 const clients = [
-  { name: "Amazon", domain: "amazon.com" },
-  { name: "Nissan", domain: "nissan.com" },
-  { name: "Sam's Club", domain: "samsclub.com" },
-  { name: "Coppel", domain: "coppel.com" },
-  { name: "Burger King", domain: "bk.com" },
-  { name: "Fraiche", domain: "fraiche.mx" },
-  { name: "Nestlé", domain: "nestle.com" },
-  { name: "AMPI", domain: "ampi.org" },
-  { name: "Elektra", domain: "elektra.com.mx" },
-  { name: "Walmart", domain: "walmart.com" },
-  { name: "Coca-Cola", domain: "coca-cola.com" },
-  { name: "BenefitHub", domain: "benefithub.com" },
+  { name: "Amazon", src: amazon },
+  { name: "Nissan", src: nissan },
+  { name: "Sam's Club", src: sams },
+  { name: "Coppel", src: coppel },
+  { name: "Burger King", src: burgerking },
+  { name: "Fraiche", src: fraiche },
+  { name: "Nestlé", src: nestle },
+  { name: "AMPI", src: ampi },
+  { name: "BenefitHub", src: benefithub },
 ];
 
 const ClientsCarousel = () => {
@@ -29,22 +35,12 @@ const ClientsCarousel = () => {
       <CarouselContent className="-ml-2">
         {clients.map((c) => (
           <CarouselItem key={c.name} className="pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6">
-            <div className="bg-white rounded-xl p-4 h-24 flex items-center justify-center card-hover">
+            <div className="h-24 flex items-center justify-center px-3">
               <img
-                src={`https://logo.clearbit.com/${c.domain}`}
+                src={c.src}
                 alt={`Logo ${c.name}`}
                 loading="lazy"
-                className="max-h-14 max-w-full object-contain"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                  const parent = e.currentTarget.parentElement;
-                  if (parent && !parent.querySelector(".fallback-text")) {
-                    const span = document.createElement("span");
-                    span.className = "fallback-text text-slate-800 font-bold text-sm";
-                    span.textContent = c.name;
-                    parent.appendChild(span);
-                  }
-                }}
+                className="max-h-16 max-w-full object-contain"
               />
             </div>
           </CarouselItem>
