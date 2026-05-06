@@ -62,9 +62,6 @@ const Empresas = () => {
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="animate-on-scroll slide-left">
-              <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-border bg-card/60 backdrop-blur-sm">
-                <span className="text-muted-foreground text-xs font-medium tracking-wider uppercase">Soluciones Empresariales</span>
-              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-5 leading-tight">
                 Nuestro Objetivo es <span className="text-secondary">Hacer Crecer</span> tu Empresa
               </h1>
@@ -93,9 +90,6 @@ const Empresas = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 animate-on-scroll">
-            <div className="inline-block mb-3 px-4 py-1.5 rounded-full border border-secondary/40 bg-secondary/10">
-              <span className="text-secondary text-xs font-bold tracking-widest uppercase">Nuestros Servicios a Empresas</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               Tipos de Convenios y Contratos
             </h2>
@@ -106,7 +100,7 @@ const Empresas = () => {
               <div key={c.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-secondary/40 card-hover">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="w-5 h-5 text-secondary-foreground" />
+                    <c.icon className="w-5 h-5 text-secondary-foreground" />
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground">{c.title}</h3>
                 </div>
@@ -114,8 +108,8 @@ const Empresas = () => {
 
                 <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Gift className="w-4 h-4 text-secondary" />
-                    <span className="font-heading font-bold text-secondary text-sm">Becas</span>
+                    <Gift className="w-4 h-4 text-white" />
+                    <span className="font-heading font-bold text-white text-sm">Becas</span>
                   </div>
                   <p className="text-muted-foreground text-xs">{c.becas}</p>
                 </div>
@@ -125,7 +119,7 @@ const Empresas = () => {
                   <ul className="space-y-1.5">
                     {c.resp.map((r) => (
                       <li key={r} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <span className="text-secondary mt-0.5">●</span>
+                        <ChevronRight className="w-3.5 h-3.5 text-secondary mt-0.5 flex-shrink-0" />
                         <span>{r}</span>
                       </li>
                     ))}
@@ -138,7 +132,7 @@ const Empresas = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="section-padding bg-background">
+      <section className="pt-4 pb-12 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-10 animate-on-scroll">
             Nuestros Beneficios
@@ -170,7 +164,7 @@ const Empresas = () => {
               Agenda una videollamada en el día y horario que más te acomode, y descubre cómo nuestros cursos de inglés pueden ayudarte a alcanzar tus metas.
             </p>
             <a href="https://wa.me/525521456414" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-background text-foreground hover:bg-background/90">
+              <Button size="lg" className="bg-white text-secondary hover:bg-white/90 font-bold">
                 Atención Personalizada <ArrowRight className="ml-1 w-4 h-4" />
               </Button>
             </a>
