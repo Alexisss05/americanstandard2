@@ -31,10 +31,10 @@ const Cursos = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative pt-24 pb-16">
+      <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={coursesBg} alt="Cursos" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/85" />
+          <img src={coursesBg} alt="Cursos" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-background/75" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
