@@ -90,11 +90,6 @@ const Cursos = () => {
         </div>
       </section>
 
-      {/* Online class image break */}
-      <section className="relative h-48">
-        <img src={onlineImg} alt="Clase online" className="w-full h-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-      </section>
 
       {/* Programas */}
       <section className="section-padding bg-background">
