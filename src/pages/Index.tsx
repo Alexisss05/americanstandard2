@@ -22,17 +22,17 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="Ciudad moderna" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 pt-16 text-center">
+        <div className="relative z-10 container mx-auto px-4 pt-24 pb-16 text-center">
           <div className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 animate-pulse-glow">
             <span className="text-primary text-sm font-medium tracking-widest uppercase">Centro de Idiomas</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4 text-foreground">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4 text-white">
             WELCOME TO<br />
             <span className="text-secondary">AMERICAN STANDARD CDI</span>
           </h1>
@@ -45,14 +45,14 @@ const Index = () => {
             </Button>
           </a>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto bg-background/60 backdrop-blur-md rounded-2xl p-6 border border-border">
             {[
               { value: "500+", label: "Estudiantes" },
               { value: "10+", label: "Coaches" },
               { value: "4", label: "Niveles" },
               { value: "100%", label: "En Vivo" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center animate-on-scroll">
+              <div key={stat.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-heading font-bold text-primary">{stat.value}</div>
                 <div className="text-muted-foreground text-sm mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
