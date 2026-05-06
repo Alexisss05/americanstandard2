@@ -6,7 +6,7 @@ import { Target, Eye, Award, BookOpen, Shield } from "lucide-react";
 import ClientsCarousel from "@/components/ClientsCarousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
-import graduationImg from "@/assets/graduation.jpg";
+import valuesBg from "@/assets/values-bg.jpg";
 
 const valores = [
   { icon: Award, title: "Excelencia Académica", desc: "Garantizamos resultados excepcionales con un enfoque innovador y docentes calificados." },
