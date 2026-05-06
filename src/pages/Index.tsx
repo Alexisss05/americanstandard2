@@ -108,9 +108,22 @@ const Index = () => {
           <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
             Nuestros <span className="text-secondary">Valores</span>
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 stagger-children">
+        </div>
+      </section>
+
+      {/* Nuestros Valores con fondo */}
+      <section className="relative py-16">
+        <div className="absolute inset-0">
+          <img src={valuesBg} alt="Valores" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-background/80" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
+            Nuestros <span className="text-secondary">Valores</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6 stagger-children max-w-5xl mx-auto">
             {valores.map((v) => (
-              <div key={v.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border card-hover text-center">
+              <div key={v.title} className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover text-center">
                 <v.icon className="w-8 h-8 text-secondary mx-auto mb-4" />
                 <h4 className="text-lg font-heading font-bold text-foreground mb-2">{v.title}</h4>
                 <p className="text-muted-foreground text-sm">{v.desc}</p>
@@ -121,12 +134,8 @@ const Index = () => {
       </section>
 
       {/* Clientes carrusel */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={graduationImg} alt="Graduación" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/90" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Clientes</span>
           </h2>
