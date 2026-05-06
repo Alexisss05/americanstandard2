@@ -4,11 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Inicio", href: "/" },
-  { label: "Nosotros", href: "/nosotros" },
+  { label: "Quiénes Somos", href: "/" },
+  { label: "¿Por qué Nosotros?", href: "/nosotros" },
   { label: "Cursos", href: "/cursos" },
   { label: "Eventos", href: "/eventos" },
-  { label: "Estándares de Competencias", href: "/estandares" },
   { label: "Empresas", href: "/empresas" },
 ];
 
@@ -24,7 +23,7 @@ const Navbar = () => {
           <span className="text-primary text-[10px] font-light tracking-widest uppercase hidden sm:inline">CDI</span>
         </Link>
 
-        <div className="hidden xl:flex items-center gap-5">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -45,29 +44,13 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hidden md:flex xl:hidden items-center gap-3 overflow-x-auto">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={`text-[11px] font-medium tracking-wide whitespace-nowrap transition-colors duration-300 ${
-                location.pathname === link.href
-                  ? "text-secondary font-semibold"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-foreground">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-background border-t border-border px-4 py-4 space-y-3">
+        <div className="lg:hidden bg-background border-t border-border px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.href}
