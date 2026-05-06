@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Index />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default App;
-=======
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -50,4 +34,3 @@ const App = () => (
 );
 
 export default App;
->>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e

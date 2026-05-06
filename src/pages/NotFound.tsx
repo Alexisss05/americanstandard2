@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-const Page = () => {
-  return <div className="min-h-screen bg-[#1a2744] text-white p-10">Página en construcción</div>;
-};
-
-export default Page;
-=======
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -29,4 +22,3 @@ const NotFound = () => {
 };
 
 export default NotFound;
->>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e

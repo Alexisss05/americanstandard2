@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-const Page = () => {
-  return <div className="min-h-screen bg-[#1a2744] text-white p-10">Página en construcción</div>;
-};
-
-export default Page;
-=======
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -113,4 +106,3 @@ const Empresas = () => {
 };
 
 export default Empresas;
->>>>>>> 44c82827c888a260eee1a0af1c8d3abc665f8b6e
