@@ -65,8 +65,8 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              ¿<span className="text-gradient-blue">Quiénes Somos</span>?
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+              ¿Quiénes Somos?
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               Somos una institución académica que ofrece a los alumnos la posibilidad de estudiar idiomas de forma accesible, con clases innovadoras y English Coaches altamente capacitados.
