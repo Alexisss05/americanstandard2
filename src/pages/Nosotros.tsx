@@ -46,7 +46,7 @@ const Nosotros = () => {
       {/* Header */}
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={corporateImg} alt="Por qué nosotros" className="w-full h-full object-cover object-center" />
+          <img src={corporateImg} alt="Por qué nosotros" className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-background/85" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
