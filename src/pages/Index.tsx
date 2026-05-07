@@ -7,6 +7,7 @@ import ClientsCarousel from "@/components/ClientsCarousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
 import valuesBg from "@/assets/values-bg.jpg";
+import graduationImg from "@/assets/graduation.jpg";
 
 const valores = [
   { icon: Award, title: "Excelencia Académica", desc: "Garantizamos resultados excepcionales con un enfoque innovador y docentes calificados." },
@@ -45,7 +46,7 @@ const Index = () => {
             </Button>
           </a>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto bg-background/60 backdrop-blur-md rounded-2xl p-6 border border-border">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
               { value: "500+", label: "Estudiantes" },
               { value: "10+", label: "Coaches" },
@@ -111,8 +112,8 @@ const Index = () => {
       {/* Nuestros Valores con fondo */}
       <section className="relative py-16">
         <div className="absolute inset-0">
-          <img src={valuesBg} alt="Valores" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/80" />
+          <img src={graduationImg} alt="Valores" className="w-full h-full object-cover object-center" loading="lazy" />
+          <div className="absolute inset-0 bg-background/85" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-foreground mb-8 animate-on-scroll">
