@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { PlayCircle, BookOpen, Video, Users, Headphones, DollarSign, Gift, ArrowRight, Phone, Handshake, FileSignature, Briefcase, FileCheck, ChevronRight } from "lucide-react";
+import { PlayCircle, BookOpen, Video, Users, Headphones, DollarSign, Gift, ArrowRight, Phone, Handshake, FileSignature, Briefcase, FileCheck, ChevronRight, CheckCircle } from "lucide-react";
 import empresasBg from "@/assets/empresas-bg.jpg";
 import corporateImg from "@/assets/corporate.jpg";
 
@@ -116,10 +116,10 @@ const Empresas = () => {
 
                 <div>
                   <p className="font-heading font-semibold text-foreground text-sm mb-2">Responsabilidades:</p>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {c.resp.map((r) => (
-                      <li key={r} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <ChevronRight className="w-3.5 h-3.5 text-secondary mt-0.5 flex-shrink-0" />
+                      <li key={r} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                         <span>{r}</span>
                       </li>
                     ))}
