@@ -106,7 +106,7 @@ const Nosotros = () => {
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground">{s.title}</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">{s.desc}</p>
                 <ul className="space-y-2">
                   {s.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
