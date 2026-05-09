@@ -34,7 +34,7 @@ const Eventos = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
             <div className="animate-on-scroll slide-left">
-              <div className="rounded-2xl overflow-hidden glow-blue">
+              <div className="rounded-2xl overflow-hidden">
                 <img src={classroomImg} alt="Evento" className="w-full h-80 object-cover" loading="lazy" width={1920} height={1080} />
               </div>
             </div>

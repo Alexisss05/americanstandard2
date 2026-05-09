@@ -122,9 +122,9 @@ const Nosotros = () => {
       </section>
 
       {/* Quote - red banner */}
-      <section className="relative py-16 bg-gradient-to-r from-background via-secondary to-background">
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic max-w-3xl mx-auto animate-on-scroll">
+      <section className="py-16 bg-secondary">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-xl md:text-2xl font-heading font-bold text-white italic max-w-3xl mx-auto animate-on-scroll">
             "Estamos comprometidos con la excelencia académica y el crecimiento profesional de nuestros estudiantes."
           </p>
         </div>
