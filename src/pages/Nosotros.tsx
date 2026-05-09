@@ -121,12 +121,8 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Quote */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={aboutBg} alt="Quote" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-secondary/90" />
-        </div>
+      {/* Quote - red banner */}
+      <section className="relative py-16 bg-gradient-to-r from-background via-secondary to-background">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic max-w-3xl mx-auto animate-on-scroll">
             "Estamos comprometidos con la excelencia académica y el crecimiento profesional de nuestros estudiantes."
