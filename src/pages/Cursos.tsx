@@ -97,12 +97,12 @@ const Cursos = () => {
           <h2 className="text-3xl font-heading font-bold text-center mb-8 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Programas</span>
           </h2>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-none stagger-children">
             {programs.map((p) => (
               <div key={p.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/50 card-hover">
                 <p.icon className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-heading font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm">{p.desc}</p>
+                <p className="text-muted-foreground text-sm text-justify">{p.desc}</p>
               </div>
             ))}
           </div>
