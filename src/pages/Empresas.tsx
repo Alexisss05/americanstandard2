@@ -65,7 +65,7 @@ const Empresas = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-5 leading-tight">
                 Nuestro Objetivo es <span className="text-secondary">Hacer Crecer</span> tu Empresa
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-xl">
+              <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-xl text-justify">
                 Permítenos ser tu aliado en el crecimiento de tu empresa y descubre cómo juntos podemos alcanzar nuevos horizontes.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -104,14 +104,14 @@ const Empresas = () => {
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground">{c.title}</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{c.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">{c.desc}</p>
 
                 <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Gift className="w-4 h-4 text-white" />
+                    <Gift className="w-4 h-4 text-secondary" />
                     <span className="font-heading font-bold text-white text-sm">Becas</span>
                   </div>
-                  <p className="text-muted-foreground text-xs">{c.becas}</p>
+                  <p className="text-muted-foreground text-xs text-justify">{c.becas}</p>
                 </div>
 
                 <div>
@@ -137,7 +137,7 @@ const Empresas = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-10 animate-on-scroll">
             Nuestros Beneficios
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-none stagger-children">
             {beneficios.map((b) => (
               <div key={b.title} className="animate-on-scroll flex gap-3 bg-card rounded-xl p-4 border border-border card-hover">
                 <div className="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
@@ -145,7 +145,7 @@ const Empresas = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-foreground text-sm mb-1">{b.title}</h4>
-                  <p className="text-muted-foreground text-xs">{b.desc}</p>
+                  <p className="text-muted-foreground text-xs text-justify">{b.desc}</p>
                 </div>
               </div>
             ))}

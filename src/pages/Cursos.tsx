@@ -54,7 +54,7 @@ const Cursos = () => {
               <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
                 Nuestro Programa: <span className="text-gradient-blue">W.T.T.W</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 Nuestro método <strong className="text-foreground">Window To The World</strong> se centra en enseñar el idioma relacionándolo con la lengua materna (español), de modo que los estudiantes logren asentar mejor sus bases y funcionamiento para finalmente comenzar a aplicarlo. Lo que nos hace únicos es nuestro enfoque en la inmersión práctica a través de tres clubes de conversación.
               </p>
             </div>
@@ -78,12 +78,12 @@ const Cursos = () => {
             <GraduationCap className="w-8 h-8 inline-block mb-1 mr-2 text-secondary" />
             Niveles
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children max-w-none">
             {levels.map((level, i) => (
               <div key={level.name} className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover">
                 <div className="text-secondary font-heading font-bold text-sm mb-2">Fase {i + 1}</div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-2">{level.name}</h3>
-                <p className="text-muted-foreground text-sm">{level.desc}</p>
+                <p className="text-muted-foreground text-sm text-justify">{level.desc}</p>
               </div>
             ))}
           </div>
@@ -97,12 +97,12 @@ const Cursos = () => {
           <h2 className="text-3xl font-heading font-bold text-center mb-8 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Programas</span>
           </h2>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-none stagger-children">
             {programs.map((p) => (
               <div key={p.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/50 card-hover">
                 <p.icon className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-heading font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm">{p.desc}</p>
+                <p className="text-muted-foreground text-sm text-justify">{p.desc}</p>
               </div>
             ))}
           </div>

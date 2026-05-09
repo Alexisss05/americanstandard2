@@ -53,7 +53,7 @@ const Nosotros = () => {
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
             ¿Por qué <span className="text-secondary">Nosotros</span>?
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-justify">
             Somos una <strong className="text-foreground">empresa global enfocada en la capacitación de inglés para empresas</strong>. Acompañamos a organizaciones de todos los tamaños en su transformación hacia entornos bilingües, impulsando la competitividad de su capital humano con metodologías probadas, certificaciones oficiales y un equipo de English Coaches altamente calificados.
           </p>
         </div>
@@ -68,7 +68,7 @@ const Nosotros = () => {
             </h2>
             <p className="text-muted-foreground">Servicio, calidad, costos accesibles y rápido aprendizaje</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-none w-full stagger-children">
             {beneficios.map((b) => (
               <div key={b.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/40 card-hover">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
@@ -106,7 +106,7 @@ const Nosotros = () => {
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground">{s.title}</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">{s.desc}</p>
                 <ul className="space-y-2">
                   {s.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
@@ -121,12 +121,8 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Quote */}
-      <section className="relative py-16">
-        <div className="absolute inset-0">
-          <img src={aboutBg} alt="Quote" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-secondary/90" />
-        </div>
+      {/* Quote - red banner */}
+      <section className="relative py-16 bg-gradient-to-r from-background via-secondary to-background">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground italic max-w-3xl mx-auto animate-on-scroll">
             "Estamos comprometidos con la excelencia académica y el crecimiento profesional de nuestros estudiantes."

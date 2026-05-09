@@ -35,12 +35,12 @@ const ClientsCarousel = () => {
       <CarouselContent className="-ml-2">
         {clients.map((c) => (
           <CarouselItem key={c.name} className="pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <div className="h-40 flex items-center justify-center px-4">
+            <div className="h-44 md:h-52 flex items-center justify-center px-2">
               <img
                 src={c.src}
                 alt={`Logo ${c.name}`}
                 loading="lazy"
-                className="max-h-32 max-w-full object-contain"
+                className="max-h-40 md:max-h-48 max-w-full object-contain"
               />
             </div>
           </CarouselItem>
