@@ -68,7 +68,7 @@ const Nosotros = () => {
             </h2>
             <p className="text-muted-foreground">Servicio, calidad, costos accesibles y rápido aprendizaje</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-none w-full stagger-children">
             {beneficios.map((b) => (
               <div key={b.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/40 card-hover">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
