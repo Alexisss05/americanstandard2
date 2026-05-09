@@ -40,11 +40,11 @@ const Eventos = () => {
             </div>
             <div className="animate-on-scroll slide-right">
               <div className="bg-card rounded-2xl border border-border overflow-hidden">
-                <div className="bg-primary p-6 text-center">
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-1">
+                <div className="p-6 text-center border-b border-border">
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-secondary mb-1">
                     Domingo de Inglés Online
                   </h2>
-                  <p className="text-primary-foreground/80 text-sm">CLASE COMPLETAMENTE GRATIS</p>
+                  <p className="text-muted-foreground text-sm">CLASE COMPLETAMENTE GRATIS</p>
                 </div>
                 <div className="p-6">
                   <p className="text-muted-foreground leading-relaxed mb-5 text-sm">
