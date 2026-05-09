@@ -65,7 +65,7 @@ const Empresas = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-5 leading-tight">
                 Nuestro Objetivo es <span className="text-secondary">Hacer Crecer</span> tu Empresa
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-xl">
+              <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-xl text-justify">
                 Permítenos ser tu aliado en el crecimiento de tu empresa y descubre cómo juntos podemos alcanzar nuevos horizontes.
               </p>
               <div className="flex flex-wrap gap-3">
