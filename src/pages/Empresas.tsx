@@ -57,7 +57,7 @@ const Empresas = () => {
       <section className="relative pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <img src={empresasBg} alt="Empresas" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/85" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -137,7 +137,7 @@ const Empresas = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-10 animate-on-scroll">
             Nuestros Beneficios
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-none stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto stagger-children">
             {beneficios.map((b) => (
               <div key={b.title} className="animate-on-scroll flex gap-3 bg-card rounded-xl p-4 border border-border card-hover">
                 <div className="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
@@ -156,7 +156,7 @@ const Empresas = () => {
       {/* Red CTA banner */}
       <section className="pb-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto rounded-2xl bg-gradient-to-r from-secondary to-secondary/80 p-10 md:p-14 text-center animate-on-scroll glow-red">
+          <div className="max-w-6xl mx-auto rounded-2xl bg-gradient-to-r from-secondary via-secondary to-[#0c2340] p-10 md:p-14 text-center animate-on-scroll glow-red">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-secondary-foreground mb-3">
               ¿Te gustaría conocer todos los beneficios que ofrecemos?
             </h2>
