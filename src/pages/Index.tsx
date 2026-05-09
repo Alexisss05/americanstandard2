@@ -46,7 +46,7 @@ const Index = () => {
             </Button>
           </a>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
             {[
               { value: "500+", label: "Estudiantes" },
               { value: "10+", label: "Coaches" },
@@ -54,8 +54,8 @@ const Index = () => {
               { value: "100%", label: "En Vivo" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-primary">{stat.value}</div>
-                <div className="text-muted-foreground text-sm mt-1 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-2xl md:text-4xl font-heading font-bold text-primary">{stat.value}</div>
+                <div className="text-muted-foreground text-xs md:text-sm mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -63,14 +63,14 @@ const Index = () => {
       </section>
 
       {/* Quiénes Somos: Misión, Visión, Valores */}
-      <section className="section-padding bg-background">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
+          <div className="text-center mb-10 animate-on-scroll">
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
               ¿Quiénes Somos?
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Somos una institución académica que ofrece a los alumnos la posibilidad de estudiar idiomas de forma accesible, con clases innovadoras y English Coaches altamente capacitados.
+              En American Standard Centro de Idiomas somos una institución académica comprometida con brindar una enseñanza de idiomas accesible, innovadora y de alta calidad. Contamos con English Coaches altamente capacitados y una metodología centrada en el aprendizaje práctico y significativo. Nuestro propósito es fomentar el gusto por el idioma inglés y contribuir al desarrollo social, económico y cultural de México.
             </p>
           </div>
 
