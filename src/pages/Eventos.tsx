@@ -23,7 +23,7 @@ const Eventos = () => {
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
             <span className="text-secondary">Eventos</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
             Participa en nuestras actividades y vive el inglés más allá del aula.
           </p>
         </div>
