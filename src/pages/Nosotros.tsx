@@ -53,7 +53,7 @@ const Nosotros = () => {
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
             ¿Por qué <span className="text-secondary">Nosotros</span>?
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-justify">
             Somos una <strong className="text-foreground">empresa global enfocada en la capacitación de inglés para empresas</strong>. Acompañamos a organizaciones de todos los tamaños en su transformación hacia entornos bilingües, impulsando la competitividad de su capital humano con metodologías probadas, certificaciones oficiales y un equipo de English Coaches altamente calificados.
           </p>
         </div>
