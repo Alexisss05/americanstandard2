@@ -137,7 +137,7 @@ const Empresas = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-10 animate-on-scroll">
             Nuestros Beneficios
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-none stagger-children">
             {beneficios.map((b) => (
               <div key={b.title} className="animate-on-scroll flex gap-3 bg-card rounded-xl p-4 border border-border card-hover">
                 <div className="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
@@ -145,7 +145,7 @@ const Empresas = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-foreground text-sm mb-1">{b.title}</h4>
-                  <p className="text-muted-foreground text-xs">{b.desc}</p>
+                  <p className="text-muted-foreground text-xs text-justify">{b.desc}</p>
                 </div>
               </div>
             ))}
