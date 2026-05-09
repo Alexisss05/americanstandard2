@@ -54,7 +54,7 @@ const Cursos = () => {
               <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
                 Nuestro Programa: <span className="text-gradient-blue">W.T.T.W</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 Nuestro método <strong className="text-foreground">Window To The World</strong> se centra en enseñar el idioma relacionándolo con la lengua materna (español), de modo que los estudiantes logren asentar mejor sus bases y funcionamiento para finalmente comenzar a aplicarlo. Lo que nos hace únicos es nuestro enfoque en la inmersión práctica a través de tres clubes de conversación.
               </p>
             </div>
