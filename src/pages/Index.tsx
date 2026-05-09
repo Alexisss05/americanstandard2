@@ -87,8 +87,8 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">Misión</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Somos una empresa comprometida en impulsar a otras organizaciones a convertirse en empresas bilingües, ofreciendo soluciones lingüísticas personalizadas para la capacitación de su capital humano.
+                  <p className="text-muted-foreground leading-relaxed text-justify">
+                    Acompañar a personas y empresas en su camino hacia el dominio del inglés mediante programas dinámicos, English Coaches certificados y una experiencia educativa cercana que transforma el aprendizaje en una herramienta real de crecimiento personal y profesional.
                   </p>
                 </div>
               </div>
@@ -98,8 +98,8 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">Visión</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Ser la empresa líder en la formación bilingüe empresarial. Aspiramos a ser reconocidos como el mejor aliado estratégico para las empresas que buscan fortalecer su posición a nivel global.
+                  <p className="text-muted-foreground leading-relaxed text-justify">
+                    Consolidarnos como un referente nacional en la enseñanza del inglés, reconocidos por la calidad de nuestros coaches, la efectividad de nuestra metodología y nuestro compromiso con abrir nuevas oportunidades a cada estudiante que confía en nosotros.
                   </p>
                 </div>
               </div>
