@@ -104,14 +104,14 @@ const Empresas = () => {
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground">{c.title}</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{c.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">{c.desc}</p>
 
                 <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Gift className="w-4 h-4 text-white" />
+                    <Gift className="w-4 h-4 text-secondary" />
                     <span className="font-heading font-bold text-white text-sm">Becas</span>
                   </div>
-                  <p className="text-muted-foreground text-xs">{c.becas}</p>
+                  <p className="text-muted-foreground text-xs text-justify">{c.becas}</p>
                 </div>
 
                 <div>
