@@ -78,12 +78,12 @@ const Cursos = () => {
             <GraduationCap className="w-8 h-8 inline-block mb-1 mr-2 text-secondary" />
             Niveles
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children max-w-none">
             {levels.map((level, i) => (
               <div key={level.name} className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover">
                 <div className="text-secondary font-heading font-bold text-sm mb-2">Fase {i + 1}</div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-2">{level.name}</h3>
-                <p className="text-muted-foreground text-sm">{level.desc}</p>
+                <p className="text-muted-foreground text-sm text-justify">{level.desc}</p>
               </div>
             ))}
           </div>
