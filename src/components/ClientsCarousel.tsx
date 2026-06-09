@@ -1,7 +1,14 @@
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import amazon from "@/assets/clients/amazon.png";
+import cocacola from "@/assets/clients/cocacola.png";
+import elektra from "@/assets/clients/elektra.png";
+import walmart from "@/assets/clients/walmart.png";
 import nissan from "@/assets/clients/nissan.png";
 import sams from "@/assets/clients/sams.png";
 import coppel from "@/assets/clients/coppel.png";
@@ -13,6 +20,9 @@ import benefithub from "@/assets/clients/benefithub.png";
 
 const clients = [
   { name: "Amazon", src: amazon },
+  { name: "Coca Cola", src: cocacola },
+  { name: "Elektra", src: elektra },
+  { name: "Walmart", src: walmart },
   { name: "Nissan", src: nissan },
   { name: "Sam's Club", src: sams },
   { name: "Coppel", src: coppel },
@@ -32,10 +42,13 @@ const ClientsCarousel = () => {
       plugins={[plugin.current]}
       className="w-full max-w-6xl mx-auto"
     >
-      <CarouselContent className="-ml-2">
+      <CarouselContent className="-ml-6">
         {clients.map((c) => (
-          <CarouselItem key={c.name} className="pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <div className="h-44 md:h-52 flex items-center justify-center px-2">
+          <CarouselItem
+            key={c.name}
+            className="pl-6 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+          >
+            <div className="h-44 md:h-52 flex items-center justify-center px-6">
               <img
                 src={c.src}
                 alt={`Logo ${c.name}`}

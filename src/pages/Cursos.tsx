@@ -2,25 +2,108 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import coursesBg from "@/assets/courses-bg.jpg";
-import empresasBg from "@/assets/empresas-bg.jpg";
-import aboutBg from "@/assets/about-bg.jpg";
-import onlineImg from "@/assets/online-class.jpg";
+import {
+  PlayCircle,
+  BookOpen,
+  Video,
+  Users,
+  Headphones,
+  DollarSign,
+  Gift,
+  ArrowRight,
+  Phone,
+  Handshake,
+  FileSignature,
+  FileCheck,
+  ChevronRight,
+  CheckCircle,
+} from "lucide-react";
+import Class from "@/assets/class.png";
 import conversationImg from "@/assets/conversation-club.jpg";
-import { GraduationCap, MessageCircle, User, Briefcase, Mail } from "lucide-react";
+import Services from "@/assets/services2.jpg";
+import {
+  GraduationCap,
+  MessageCircle,
+  User,
+  Briefcase,
+  Mail,
+} from "lucide-react";
+import { Star } from "lucide-react";
+import cityBg from "@/assets/city.jpg";
 
 const levels = [
-  { name: "Introducción", desc: "Fundamentos del inglés, vocabulario esencial y estructuras gramaticales básicas para comunicarte en situaciones cotidianas." },
-  { name: "Básico", desc: "Desarrollo de comprensión oral y escrita. 3 niveles: Gramática, Estructura, Vocabulario + Club de conversación." },
-  { name: "Intermedio", desc: "Fortalecimiento de destrezas en comprensión auditiva y escrita. 3 niveles con enfoque en fluidez y seguridad." },
-  { name: "Avanzado", desc: "Perfecciona habilidades para conversaciones sofisticadas, textos complejos, expresiones idiomáticas y modismos." },
+  {
+    name: "Introducción",
+    desc: "Fundamentos del inglés, vocabulario esencial y estructuras gramaticales básicas para comunicarte en situaciones cotidianas.",
+  },
+  {
+    name: "Básico",
+    desc: "Desarrollo de comprensión oral y escrita. 3 niveles: Gramática, Estructura, Vocabulario + Club de conversación.",
+  },
+  {
+    name: "Intermedio",
+    desc: "Fortalecimiento de destrezas en comprensión auditiva y escrita. 3 niveles con enfoque en fluidez y seguridad.",
+  },
+  {
+    name: "Avanzado",
+    desc: "Perfecciona habilidades para conversaciones sofisticadas, textos complejos, expresiones idiomáticas y modismos.",
+  },
 ];
 
 const programs = [
-  { icon: MessageCircle, title: "Clubs de Conversación", desc: "Clubes para todos los niveles con profesores nativos altamente capacitados. ¡Aprende de forma divertida y efectiva!" },
-  { icon: User, title: "Clases Privadas", desc: "Aprendizaje personalizado con flexibilidad para diseñar tu propio horario. ¿Mañana o noche? ¡Tú decides!" },
-  { icon: Briefcase, title: "Intelligent Business", desc: "Clubes de conversación enfocados en áreas empresariales: contabilidad, recursos humanos, ventas y logística." },
-  { icon: Mail, title: "Business Communications", desc: "Desarrolla comunicación en inglés para reuniones, correos profesionales, presentaciones y negociaciones internacionales." },
+  {
+    icon: MessageCircle,
+    title: "Clubs de Conversación",
+    desc: "Clubes para todos los niveles con profesores nativos altamente capacitados. ¡Aprende de forma divertida y efectiva!",
+  },
+  {
+    icon: User,
+    title: "Clases Privadas",
+    desc: "Aprendizaje personalizado con flexibilidad para diseñar tu propio horario. ¿Mañana o noche? ¡Tú decides!",
+  },
+  {
+    icon: Briefcase,
+    title: "Intelligent Business",
+    desc: "Clubes de conversación enfocados en áreas empresariales: contabilidad, recursos humanos, ventas y logística.",
+  },
+  {
+    icon: Mail,
+    title: "Business Communications",
+    desc: "Desarrolla comunicación en inglés para reuniones, correos profesionales, presentaciones y negociaciones internacionales.",
+  },
+];
+
+const beneficios = [
+  {
+    icon: PlayCircle,
+    title: "Master Class Gratuita",
+    desc: "Para que los participantes experimenten nuestra metodología de enseñanza.",
+  },
+  {
+    icon: BookOpen,
+    title: "Material de Apoyo",
+    desc: "Material gratuito diseñado para reforzar el aprendizaje fuera del aula.",
+  },
+  {
+    icon: Video,
+    title: "Clases 100% en Vivo",
+    desc: "Mayor interacción y conexión entre el estudiante y el profesor.",
+  },
+  {
+    icon: Users,
+    title: "Grupos Reducidos",
+    desc: "Atención personalizada para un aprendizaje más efectivo.",
+  },
+  {
+    icon: Headphones,
+    title: "Clases Grabadas",
+    desc: "Accede a las lecciones en cualquier momento.",
+  },
+  {
+    icon: DollarSign,
+    title: "Costos Accesibles",
+    desc: "Cursos diseñados para ser accesibles y convenientes.",
+  },
 ];
 
 const Cursos = () => {
@@ -31,9 +114,14 @@ const Cursos = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
+      <section className="relative pt-32 pb-32 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={coursesBg} alt="Cursos" className="w-full h-full object-cover object-top" />
+          <img
+            src={Services}
+            alt="Cursos"
+            className="w-full h-full object-cover object-[20%_15%]"
+          />
+
           <div className="absolute inset-0 bg-background/75" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -41,7 +129,9 @@ const Cursos = () => {
             Servicios <span className="text-secondary">Exclusivos</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Descubre nuestra amplia gama de cursos de inglés diseñados para adaptarse a tu vida. Con horarios flexibles y una variedad de áreas temáticas.
+            Descubre nuestra amplia gama de cursos de inglés diseñados para
+            adaptarse a tu vida. Con horarios flexibles y una variedad de áreas
+            temáticas.
           </p>
         </div>
       </section>
@@ -52,15 +142,29 @@ const Cursos = () => {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="animate-on-scroll slide-left">
               <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
-                Nuestro Programa: <span className="text-gradient-blue">W.T.T.W</span>
+                Nuestro Programa:{" "}
+                <span className="text-gradient-blue">W.T.T.W</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed text-justify">
-                Nuestro método <strong className="text-foreground">Window To The World</strong> se centra en enseñar el idioma relacionándolo con la lengua materna (español), de modo que los estudiantes logren asentar mejor sus bases y funcionamiento para finalmente comenzar a aplicarlo. Lo que nos hace únicos es nuestro enfoque en la inmersión práctica a través de tres clubes de conversación.
+                Nuestro método{" "}
+                <strong className="text-foreground">Window To The World</strong>{" "}
+                se centra en enseñar el idioma relacionándolo con la lengua
+                materna (español), de modo que los estudiantes logren asentar
+                mejor sus bases y funcionamiento para finalmente comenzar a
+                aplicarlo. Lo que nos hace únicos es nuestro enfoque en la
+                inmersión práctica a través de tres clubes de conversación.
               </p>
             </div>
             <div className="animate-on-scroll slide-right">
               <div className="rounded-2xl overflow-hidden glow-blue">
-                <img src={conversationImg} alt="Programa" className="w-full h-64 object-cover" loading="lazy" width={1920} height={1080} />
+                <img
+                  src={conversationImg}
+                  alt="Programa"
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
               </div>
             </div>
           </div>
@@ -70,7 +174,12 @@ const Cursos = () => {
       {/* Niveles */}
       <section className="relative py-16">
         <div className="absolute inset-0">
-          <img src={empresasBg} alt="Niveles" className="w-full h-full object-cover" loading="lazy" />
+          <img
+            src={Class}
+            alt="Niveles"
+            className="w-full h-full object-cover object-[50%_35%]"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-background/90" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
@@ -80,29 +189,83 @@ const Cursos = () => {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children max-w-none">
             {levels.map((level, i) => (
-              <div key={level.name} className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover">
-                <div className="text-secondary font-heading font-bold text-sm mb-2">Fase {i + 1}</div>
-                <h3 className="text-lg font-heading font-bold text-foreground mb-2">{level.name}</h3>
-                <p className="text-muted-foreground text-sm text-justify">{level.desc}</p>
+              <div
+                key={level.name}
+                className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover"
+              >
+                <div className="text-secondary font-heading font-bold text-sm mb-2">
+                  Fase {i + 1}
+                </div>
+                <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+                  {level.name}
+                </h3>
+                <p className="text-muted-foreground text-sm text-justify">
+                  {level.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-
       {/* Programas */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-center mb-8 text-foreground animate-on-scroll">
+          <h2 className="text-3xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Programas</span>
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-none stagger-children">
+          <div className="grid grid-cols-2 gap-6 max-w-6xl mx-auto stagger-children">
             {programs.map((p) => (
-              <div key={p.title} className="animate-on-scroll bg-card rounded-xl p-6 border border-border hover:border-primary/50 card-hover">
-                <p.icon className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-heading font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm text-justify">{p.desc}</p>
+              <div
+                key={p.title}
+                className="animate-on-scroll bg-card rounded-xl p-8 border border-border hover:border-primary/50 card-hover"
+              >
+                <p.icon className="w-10 h-10 text-primary mb-4" />
+                <h3 className="font-heading font-bold text-foreground text-xl mb-3">
+                  {p.title}
+                </h3>
+                <p className="text-muted-foreground text-base text-justify">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beneficios */}
+      <section className="relative pt-8 pb-20">
+        <div className="absolute inset-0">
+          <img
+            src={cityBg}
+            alt="Beneficios"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-background/90" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <h2 className="text-3xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll flex items-center justify-center gap-3">
+            <Star className="w-8 h-8 text-secondary" />
+            Nuestros Beneficios
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-2xl mx-auto stagger-children">
+            {beneficios.map((b) => (
+              <div
+                key={b.title}
+                className="animate-on-scroll flex gap-6 bg-card/80 backdrop-blur-sm rounded-xl p-10 border border-border card-hover"
+              >
+                <div className="w-16 h-16 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
+                  <b.icon className="w-8 h-8 text-secondary" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-foreground text-lg mb-3">
+                    {b.title}
+                  </h4>
+                  <p className="text-muted-foreground text-base text-justify">
+                    {b.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -113,10 +276,17 @@ const Cursos = () => {
       <section className="py-12 bg-secondary text-center">
         <div className="container mx-auto px-4">
           <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground mb-4 animate-on-scroll">
-            Tu actual circunstancia no determina hasta donde puedes llegar, solo te dice por dónde empezar.
+            Tu actual circunstancia no determina hasta donde puedes llegar, solo
+            te dice por dónde empezar.
           </p>
-          <a href="https://wa.me/525521456414" target="_blank" rel="noopener noreferrer">
-            <Button variant="hero" size="lg" className="animate-on-scroll">Contáctanos</Button>
+          <a
+            href="https://wa.me/525521456414"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="hero" size="lg" className="animate-on-scroll">
+              Contáctanos
+            </Button>
           </a>
         </div>
       </section>

@@ -4,13 +4,14 @@
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "skipLibCheck": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+
+    /* 🔹 Configuración de rutas */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
   "files": [],
   "references": [
