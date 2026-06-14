@@ -94,7 +94,7 @@ const Index = () => {
       </section>
 
       {/* Quiénes Somos: Misión, Visión, Valores */}
-      <section className="pb-12 md:pb-16 bg-background">
+      <section className="pt-12 md:pt-16 pb-12 md:pb-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="mb-10 animate-on-scroll">
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 text-center">
