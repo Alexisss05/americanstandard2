@@ -104,7 +104,7 @@ const Empresas = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://wa.me/525521456414"
+                  href="https://wa.me/525511770981"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -113,7 +113,7 @@ const Empresas = () => {
                   </Button>
                 </a>
                 <a
-                  href="https://wa.me/525521456414"
+                  href="https://wa.me/525511770981"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -203,16 +203,18 @@ const Empresas = () => {
       {/* Red CTA banner ocupando todo el ancho del grid */}
       <section className="pb-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="py-12 bg-secondary text-center rounded-xl max-w-6xl mx-auto animate-on-scroll p-10 md:p-14">
+          <div className="p-10 md:p-14 bg-secondary text-center rounded-xl max-w-6xl mx-auto animate-on-scroll">
             <h2 className="text-2xl md:text-4xl font-heading font-bold text-secondary-foreground mb-4">
               ¡Enseñamos idiomas, cambiamos vidas!
             </h2>
             <a
-              href="tel:5511770981"
+              href="https://wa.me/525511770981"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 text-2xl md:text-3xl font-heading font-bold text-white hover:text-white/80 hover:scale-105 hover:tracking-wide transition-all duration-300"
             >
               <Phone className="w-7 h-7 text-white" />
-              55 1177 0981
+              +52 55 1177 0981
             </a>
           </div>
         </div>

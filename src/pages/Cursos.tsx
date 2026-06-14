@@ -280,7 +280,7 @@ const Cursos = () => {
             te dice por dónde empezar.
           </p>
           <a
-            href="https://wa.me/525521456414"
+            href="https://wa.me/525511770981"
             target="_blank"
             rel="noopener noreferrer"
           >
