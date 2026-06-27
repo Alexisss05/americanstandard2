@@ -20,7 +20,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 import empresasBg from "@/assets/empresas2-bg.jpg";
-import corporateImg from "@/assets/corporate.jpg";
 import highFive from "@/assets/highfive.png";
 
 const convenios = [
@@ -82,7 +81,7 @@ const Empresas = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-36 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={empresasBg}
@@ -98,27 +97,22 @@ const Empresas = () => {
                 Nuestro Objetivo es{" "}
                 <span className="text-secondary">Hacer Crecer</span> tu Empresa
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-xl text-justify">
+              <p className="text-muted-foreground text-xl md:text-2xl mb-8 max-w-xl text-justify">
                 Permítenos ser tu aliado en el crecimiento de tu empresa y
                 descubre cómo juntos podemos alcanzar nuevos horizontes.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://wa.me/525511770981"
+                  href="https://wa.me/525521456414"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="heroRed" size="lg">
+                  <Button
+                    variant="heroRed"
+                    size="lg"
+                    className="text-base px-6 py-6"
+                  >
                     Solicitar Cotización <ArrowRight className="ml-1 w-4 h-4" />
-                  </Button>
-                </a>
-                <a
-                  href="https://wa.me/525511770981"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="heroOutline" size="lg">
-                    Hablar con un Asesor
                   </Button>
                 </a>
               </div>
@@ -147,7 +141,6 @@ const Empresas = () => {
               Tipos de Convenios y Contratos
             </h2>
           </div>
-
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto stagger-children">
             {convenios.map((c) => (
               <div
@@ -158,37 +151,35 @@ const Empresas = () => {
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
                     <c.icon className="w-5 h-5 text-secondary-foreground" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-foreground">
+                  <h3 className="text-2xl font-heading font-bold text-foreground">
                     {c.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">
+                <p className="text-muted-foreground text-xl leading-relaxed mb-4 text-justify">
                   {c.desc}
                 </p>
-
                 <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-2">
                     <Gift className="w-4 h-4 text-secondary" />
-                    <span className="font-heading font-bold text-white text-sm">
+                    <span className="font-heading font-bold text-white text-lg">
                       Becas
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-xs text-justify">
+                  <p className="text-muted-foreground text-lg text-justify">
                     {c.becas}
                   </p>
                 </div>
-
                 <div>
-                  <p className="font-heading font-semibold text-foreground text-sm mb-2">
+                  <p className="font-heading font-semibold text-foreground text-lg mb-2">
                     Responsabilidades:
                   </p>
                   <ul className="space-y-2">
                     {c.resp.map((r) => (
                       <li
                         key={r}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                        className="flex items-start gap-2 text-lg text-muted-foreground"
                       >
-                        <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                         <span>{r}</span>
                       </li>
                     ))}
@@ -200,7 +191,7 @@ const Empresas = () => {
         </div>
       </section>
 
-      {/* Red CTA banner ocupando todo el ancho del grid */}
+      {/* CTA */}
       <section className="pb-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="p-10 md:p-14 bg-secondary text-center rounded-xl max-w-6xl mx-auto animate-on-scroll">
@@ -208,17 +199,18 @@ const Empresas = () => {
               ¡Enseñamos idiomas, cambiamos vidas!
             </h2>
             <a
-              href="https://wa.me/525511770981"
+              href="https://wa.me/525521456414"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 text-2xl md:text-3xl font-heading font-bold text-white hover:text-white/80 hover:scale-105 hover:tracking-wide transition-all duration-300"
             >
               <Phone className="w-7 h-7 text-white" />
-              +52 55 1177 0981
+              +52 55 2145 6414
             </a>
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

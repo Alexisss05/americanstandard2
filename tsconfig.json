@@ -8,9 +8,8 @@
     "strictNullChecks": false,
 
     /* 🔹 Configuración de rutas */
-    "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./src/*"]
     }
   },
   "files": [],

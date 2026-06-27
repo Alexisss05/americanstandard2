@@ -94,7 +94,7 @@ const Nosotros = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
+      <section className="relative pt-40 pb-20 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src={corporateImg}
@@ -104,10 +104,10 @@ const Nosotros = () => {
           <div className="absolute inset-0 bg-background/85" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-10 leading-tight">
             ¿Por qué <span className="text-secondary">Nosotros</span>?
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-justify">
+          <p className="text-muted-foreground text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed text-justify">
             Somos una{" "}
             <strong className="text-foreground">
               empresa global enfocada en la capacitación de inglés para empresas
@@ -128,7 +128,7 @@ const Nosotros = () => {
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-3">
               Nuestro <span className="text-primary">Enfoque</span>
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-2xl">
               Calidad, flexibilidad y resultados reales para tu aprendizaje
             </p>
           </div>
@@ -141,11 +141,11 @@ const Nosotros = () => {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <b.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-heading font-bold text-foreground text-lg mb-2">
+                <h3 className="font-heading font-bold text-foreground text-2xl mb-2">
                   {b.title}
                 </h3>
                 <div className="w-10 h-0.5 bg-primary mb-3 rounded-full" />
-                <p className="text-muted-foreground text-base">{b.desc}</p>
+                <p className="text-muted-foreground text-xl">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -168,13 +168,13 @@ const Nosotros = () => {
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-5">
               Estándares de <span className="text-secondary">Competencia</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-2xl max-w-4xl mx-auto">
               Certificaciones oficiales avaladas por reconocidas instituciones
               que respaldan la calidad de nuestros programas con reconocimiento
               nacional e internacional.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 max-w-screen-xl mx-auto stagger-children">
+          <div className="grid md:grid-cols-3 gap-10 max-w-screen-2xl mx-auto stagger-children">
             {standards.map((s) => (
               <div
                 key={s.title}
@@ -188,15 +188,12 @@ const Nosotros = () => {
                     {s.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-base leading-relaxed mb-5 text-justify">
+                <p className="text-muted-foreground text-xl leading-relaxed mb-5 text-justify">
                   {s.desc}
                 </p>
                 <ul className="space-y-3">
                   {s.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-base"
-                    >
+                    <li key={item} className="flex items-center gap-3 text-lg">
                       <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                       <span className="text-foreground">{item}</span>
                     </li>
@@ -208,10 +205,10 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Quote - red banner */}
+      {/* Quote */}
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl font-heading font-bold text-white italic max-w-3xl mx-auto animate-on-scroll">
+          <p className="text-2xl md:text-3xl font-heading font-bold text-white italic max-w-5xl mx-auto animate-on-scroll">
             "Estamos comprometidos con la excelencia académica y el crecimiento
             profesional de nuestros estudiantes."
           </p>

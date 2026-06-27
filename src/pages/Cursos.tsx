@@ -114,21 +114,20 @@ const Cursos = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative pt-32 pb-32 min-h-[60vh] flex items-center">
+      <section className="relative pt-44 pb-32 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src={Services}
             alt="Cursos"
             className="w-full h-full object-cover object-[20%_15%]"
           />
-
           <div className="absolute inset-0 bg-background/75" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6">
             Servicios <span className="text-secondary">Exclusivos</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-3xl max-w-4xl mx-auto">
             Descubre nuestra amplia gama de cursos de inglés diseñados para
             adaptarse a tu vida. Con horarios flexibles y una variedad de áreas
             temáticas.
@@ -136,16 +135,16 @@ const Cursos = () => {
         </div>
       </section>
 
-      {/* Método with image */}
+      {/* Método */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="animate-on-scroll slide-left">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground">
                 Nuestro Programa:{" "}
                 <span className="text-gradient-blue">W.T.T.W</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed text-justify">
+              <p className="text-muted-foreground text-2xl leading-relaxed text-justify">
                 Nuestro método{" "}
                 <strong className="text-foreground">Window To The World</strong>{" "}
                 se centra en enseñar el idioma relacionándolo con la lengua
@@ -160,7 +159,7 @@ const Cursos = () => {
                 <img
                   src={conversationImg}
                   alt="Programa"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-100 object-cover"
                   loading="lazy"
                   width={1920}
                   height={1080}
@@ -183,23 +182,24 @@ const Cursos = () => {
           <div className="absolute inset-0 bg-background/90" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-8 animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-8 animate-on-scroll">
             <GraduationCap className="w-8 h-8 inline-block mb-1 mr-2 text-secondary" />
             Niveles
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children max-w-none">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children max-w-screen-2xl mx-auto">
+            {" "}
             {levels.map((level, i) => (
               <div
                 key={level.name}
                 className="animate-on-scroll bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border card-hover"
               >
-                <div className="text-secondary font-heading font-bold text-sm mb-2">
+                <div className="text-secondary font-heading font-bold text-xl mb-2">
                   Fase {i + 1}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                   {level.name}
                 </h3>
-                <p className="text-muted-foreground text-sm text-justify">
+                <p className="text-muted-foreground text-xl text-justify">
                   {level.desc}
                 </p>
               </div>
@@ -211,7 +211,7 @@ const Cursos = () => {
       {/* Programas */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Programas</span>
           </h2>
           <div className="grid grid-cols-2 gap-6 max-w-6xl mx-auto stagger-children">
@@ -221,10 +221,10 @@ const Cursos = () => {
                 className="animate-on-scroll bg-card rounded-xl p-8 border border-border hover:border-primary/50 card-hover"
               >
                 <p.icon className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-heading font-bold text-foreground text-xl mb-3">
+                <h3 className="font-heading font-bold text-foreground text-2xl mb-3">
                   {p.title}
                 </h3>
-                <p className="text-muted-foreground text-base text-justify">
+                <p className="text-muted-foreground text-xl text-justify">
                   {p.desc}
                 </p>
               </div>
@@ -245,7 +245,7 @@ const Cursos = () => {
           <div className="absolute inset-0 bg-background/90" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll flex items-center justify-center gap-3">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll flex items-center justify-center gap-3">
             <Star className="w-8 h-8 text-secondary" />
             Nuestros Beneficios
           </h2>
@@ -253,19 +253,19 @@ const Cursos = () => {
             {beneficios.map((b) => (
               <div
                 key={b.title}
-                className="animate-on-scroll flex gap-6 bg-card/80 backdrop-blur-sm rounded-xl p-10 border border-border card-hover"
+                className="animate-on-scroll flex flex-col bg-card/80 backdrop-blur-sm rounded-xl p-10 border border-border card-hover"
               >
-                <div className="w-16 h-16 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                  <b.icon className="w-8 h-8 text-secondary" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground text-lg mb-3">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-lg bg-secondary/15 flex items-center justify-center flex-shrink-0">
+                    <b.icon className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h4 className="font-heading font-bold text-foreground text-2xl">
                     {b.title}
                   </h4>
-                  <p className="text-muted-foreground text-base text-justify">
-                    {b.desc}
-                  </p>
                 </div>
+                <p className="text-muted-foreground text-xl text-justify">
+                  {b.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -275,12 +275,12 @@ const Cursos = () => {
       {/* CTA */}
       <section className="py-12 bg-secondary text-center">
         <div className="container mx-auto px-4">
-          <p className="text-xl md:text-2xl font-heading font-bold text-secondary-foreground mb-4 animate-on-scroll">
+          <p className="text-2xl md:text-2xl font-heading font-bold text-secondary-foreground mb-4 animate-on-scroll">
             Tu actual circunstancia no determina hasta donde puedes llegar, solo
             te dice por dónde empezar.
           </p>
           <a
-            href="https://wa.me/525511770981"
+            href="https://wa.me/525521456414"
             target="_blank"
             rel="noopener noreferrer"
           >
