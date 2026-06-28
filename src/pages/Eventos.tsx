@@ -15,7 +15,7 @@ import {
 import heroBg from "@/assets/hero-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
 
-const getNextSunday = () => {
+/* const getNextSunday = () => {
   const today = new Date();
   const day = today.getDay(); // 0 = domingo
   const diff = day === 0 ? 0 : 7 - day; // si hoy es domingo, usa hoy
@@ -29,7 +29,7 @@ const getNextSunday = () => {
     year: "numeric",
   });
 };
-
+*/
 const BlogGrid = ({ posts }: { posts: any[] }) => {
   const [selectedPost, setSelectedPost] = useState<any>(null);
 
@@ -208,7 +208,7 @@ const Eventos = () => {
                       {
                         icon: Calendar,
                         label: "Fecha",
-                        value: getNextSunday(),
+                        value: "",
                       },
 
                       { icon: Clock, label: "Horario", value: "8:00 pm CDMX" },
