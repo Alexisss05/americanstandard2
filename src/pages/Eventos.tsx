@@ -17,11 +17,12 @@ import classroomImg from "@/assets/classroom-1.jpg";
 
 const getNextSunday = () => {
   const today = new Date();
-  const day = today.getDay(); // 0 = domingo, 1 = lunes, etc.
-  const diff = day === 0 ? 0 : 7 - day; // si hoy es domingo, diff = 0
+  const day = today.getDay(); // 0 = domingo
+  const diff = day === 0 ? 0 : 7 - day; // si hoy es domingo, usa hoy
   const nextSunday = new Date(today);
   nextSunday.setDate(today.getDate() + diff);
 
+  // Formatear en español sin usar servicios del dispositivo
   return nextSunday.toLocaleDateString("es-MX", {
     day: "numeric",
     month: "long",
