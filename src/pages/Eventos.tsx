@@ -17,10 +17,11 @@ import classroomImg from "@/assets/classroom-1.jpg";
 
 const getNextSunday = () => {
   const today = new Date();
-  const day = today.getDay();
-  const daysUntilSunday = day === 0 ? 7 : 7 - day;
+  const day = today.getDay(); // 0 = domingo, 1 = lunes, etc.
+  const diff = day === 0 ? 0 : 7 - day; // si hoy es domingo, diff = 0
   const nextSunday = new Date(today);
-  nextSunday.setDate(today.getDate() + daysUntilSunday);
+  nextSunday.setDate(today.getDate() + diff);
+
   return nextSunday.toLocaleDateString("es-MX", {
     day: "numeric",
     month: "long",
