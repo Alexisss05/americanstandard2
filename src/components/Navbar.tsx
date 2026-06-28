@@ -42,7 +42,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="heroRed" size="lg">
+            <Button variant="heroRed" size="sm">
               Master Class GRATIS
             </Button>
           </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-background border-t border-border px-6 py-4 space-y-3">
+        <div className="lg:hidden bg-background/90 backdrop-blur-xl border-t border-border px-6 py-6 space-y-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -72,15 +72,17 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <a
-            href="https://wa.me/525521456414"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="heroRed" size="sm" className="w-full">
-              Master Class GRATIS
-            </Button>
-          </a>
+          <div className="pt-4 border-t border-border">
+            <a
+              href="https://wa.me/525521456414"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="heroRed" size="sm" className="w-full">
+                Master Class GRATIS
+              </Button>
+            </a>
+          </div>
         </div>
       )}
     </nav>

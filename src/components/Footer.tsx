@@ -4,8 +4,8 @@ import { Instagram, Facebook, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-6">
           <div>
             <Link to="/" className="font-heading font-bold text-2xl">
               <span className="text-foreground">AMERICAN STANDARD</span>

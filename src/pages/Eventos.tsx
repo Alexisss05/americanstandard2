@@ -15,21 +15,20 @@ import {
 import heroBg from "@/assets/hero-bg.jpg";
 import classroomImg from "@/assets/classroom-1.jpg";
 
-/* const getNextSunday = () => {
+const getNextSunday = () => {
   const today = new Date();
-  const day = today.getDay(); // 0 = domingo
-  const diff = day === 0 ? 0 : 7 - day; // si hoy es domingo, usa hoy
+  const day = today.getDay();
+  const diff = day === 0 ? 0 : 7 - day;
   const nextSunday = new Date(today);
   nextSunday.setDate(today.getDate() + diff);
 
-  // Formatear en español sin usar servicios del dispositivo
   return nextSunday.toLocaleDateString("es-MX", {
     day: "numeric",
     month: "long",
     year: "numeric",
   });
 };
-*/
+
 const BlogGrid = ({ posts }: { posts: any[] }) => {
   const [selectedPost, setSelectedPost] = useState<any>(null);
 
@@ -131,7 +130,7 @@ const Eventos = () => {
   useScrollAnimation();
   const [wordpressPosts, setWordpressPosts] = useState<any[]>([]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     fetch("http://localhost/wordpress/wp-json/wp/v2/posts?per_page=10&_embed")
       .then((res) => res.json())
       .then((data) => {
@@ -141,7 +140,7 @@ const Eventos = () => {
         console.error("Error al cargar publicaciones de WordPress:", error),
       );
   }, []);
-
+  */
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
@@ -208,7 +207,7 @@ const Eventos = () => {
                       {
                         icon: Calendar,
                         label: "Fecha",
-                        value: "",
+                        value: getNextSunday(),
                       },
 
                       { icon: Clock, label: "Horario", value: "8:00 pm CDMX" },

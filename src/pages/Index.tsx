@@ -44,7 +44,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-background/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
-        <div className="relative z-10 w-full px-4 pt-40 pb-8 text-center">
+        <div className="relative z-10 w-full px-4 pt-36 pb-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-normal mb-10 text-white">
             WELCOME TO
             <br />
@@ -65,7 +65,7 @@ const Index = () => {
             <Button
               variant="heroRed"
               size="lg"
-              className="text-base px-10 py-7"
+              className="text-base px-8 md:px-12 py-7 w-full sm:w-auto"
             >
               Agenda tu Master Class GRATIS
             </Button>
