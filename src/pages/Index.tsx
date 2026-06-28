@@ -44,7 +44,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-background/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 pt-40 pb-8 text-center">
+        <div className="relative z-10 w-full px-4 pt-40 pb-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-normal mb-10 text-white">
             WELCOME TO
             <br />
@@ -52,9 +52,10 @@ const Index = () => {
             <span className="text-primary">STANDARD</span> <br />
             <span className="text-white">CENTRO DE IDIOMAS</span>
           </h1>
-          <p className="text-muted-foreground text-2xl font-heading font-semibold max-w-4xl mx-auto mb-10">
-            Todo lo que necesitas para aprender un nuevo idioma, <br /> en un
-            solo lugar
+          <p className="text-muted-foreground text-3xl font-heading font-semibold max-w-4xl mx-auto mb-12">
+            Todo lo que necesitas para aprender un nuevo idioma,
+            <br />
+            en un solo lugar
           </p>
           <a
             href="https://wa.me/525521456414"
@@ -64,7 +65,7 @@ const Index = () => {
             <Button
               variant="heroRed"
               size="lg"
-              className="text-base px-12 py-7"
+              className="text-base px-10 py-7"
             >
               Agenda tu Master Class GRATIS
             </Button>
@@ -125,15 +126,17 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-on-scroll slide-right space-y-6">
-              <div className="flex gap-5">
+              <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Target className="w-7 h-7 text-primary" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">
-                    Misión
-                  </h3>
-                  <p className="text-muted-foreground text-xl leading-relaxed text-justify">
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-2xl font-heading font-bold text-foreground">
+                      Misión
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-xl leading-relaxed text-justify mt-2">
                     Acompañar a personas y empresas en su camino hacia el
                     dominio del inglés mediante programas dinámicos, English
                     Coaches certificados y una experiencia educativa cercana que
@@ -142,15 +145,18 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-5">
+
+              <div className="flex items-start gap-5">
                 <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <Eye className="w-7 h-7 text-secondary" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">
-                    Visión
-                  </h3>
-                  <p className="text-muted-foreground text-xl leading-relaxed text-justify">
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-2xl font-heading font-bold text-foreground">
+                      Visión
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-xl leading-relaxed text-justify mt-2">
                     Consolidarnos como un referente nacional en la enseñanza del
                     inglés, reconocidos por la calidad de nuestros coaches, la
                     efectividad de nuestra metodología y nuestro compromiso con

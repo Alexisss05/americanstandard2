@@ -89,7 +89,9 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-base text-muted-foreground">
               <li>+52 55 2145 6414</li>
-              <li>tania@americanstandardcentrodeidiomas.com.mx</li>
+              <li className="break-all">
+                tania@americanstandardcentrodeidiomas.com.mx
+              </li>
             </ul>
           </div>
         </div>

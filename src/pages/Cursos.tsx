@@ -214,7 +214,7 @@ const Cursos = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-10 text-foreground animate-on-scroll">
             Nuestros <span className="text-gradient-blue">Programas</span>
           </h2>
-          <div className="grid grid-cols-2 gap-6 max-w-6xl mx-auto stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto stagger-children">
             {programs.map((p) => (
               <div
                 key={p.title}
