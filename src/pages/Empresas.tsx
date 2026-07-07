@@ -194,7 +194,7 @@ const Empresas = () => {
       {/* CTA */}
       <section className="pb-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="p-10 md:p-14 bg-secondary text-center rounded-xl max-w-6xl mx-auto animate-on-scroll">
+          <div className="p-10 md:p-14 bg-secondary text-center rounded-xl max-w-6xl mx-auto animate-on-scroll glow-red">
             <h2 className="text-2xl md:text-4xl font-heading font-bold text-secondary-foreground mb-4">
               ¡Enseñamos idiomas, cambiamos vidas!
             </h2>

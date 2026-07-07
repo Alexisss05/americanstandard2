@@ -181,7 +181,7 @@ const Cursos = () => {
           />
           <div className="absolute inset-0 bg-background/90" />
         </div>
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10 mx-auto px-8">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-8 animate-on-scroll">
             <GraduationCap className="w-8 h-8 inline-block mb-1 mr-2 text-secondary" />
             Niveles
